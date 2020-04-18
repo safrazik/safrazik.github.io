@@ -6,10 +6,10 @@ layout: home
   <div class="container">
     <!-- <h1 class="display-4">Creating* <strong>Apps</strong> that "just work"</h1> -->
     <h1 class="display-4">
-      We cook <strong>Apps</strong> that can be eaten<strong>*</strong>
+      I cook <strong>Apps</strong> that can be eaten<strong>*</strong>
     </h1>
     <p class="lead">
-      We have <strong>"Collective Experience"</strong> in developing world class
+      I have <strong>"Collective Experience"</strong> in developing world class
       apps for <strong>Web, iOS and Android</strong> platforms with proven
       technology stack with a reasonable budget and deadline.
     </p>
@@ -21,7 +21,7 @@ layout: home
 </section>
 <section class="mb-3">
   <div class="container">
-    <div class="mb-3">Our Values</div>
+    <div class="mb-3">My values</div>
     <div class="row">
       <div class="col-md-4 mb-3">
         <div class="card text-white bg-zetmel-z h-100">
@@ -90,9 +90,20 @@ layout: home
     assign friends_reviews = site.reviews | where: "type", "friend" %}
 
     <div class="mb-3">
-      What our clients say
+      What my clients say
     </div>
     {% include reviews.html keys=site.reviews_order type="client" rating=true %}
+
+    <hr class="mb-4" />
+    <!-- <div class=""></div> -->
+
+    <div class="mb-3">
+      How my friends reacted when I shared
+      <a href="https://safrazik.com/resume/"><strong>My Resume</strong></a>
+      for inspiration on Facebook:
+    </div>
+    {% include reviews.html keys=site.comments_order type="friend" rating=false
+    %}
   </div>
   {% include stars.svg %}
 </section>
