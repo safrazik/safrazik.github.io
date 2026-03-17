@@ -169,18 +169,24 @@
 body {
 }
     .jumbotron {
-      background: url(assets/studio.jpg);
-      background-size: cover;
-      /*background-position: center;*/
-      /*background-position: top right;*/
+      background: url(assets/laptop.jpg);
       border-radius: 0;
       color: #FFF;
-
-      background-position: right top;
-      background-position: right 50%;
-      background-position: right 30%;
-      background-size: 100% auto;
-      background-repeat: repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    .jumbotron::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      background: rgb(0 0 0 / 70%);
+      backdrop-filter: blur(1px);
     }
 
     .jumbotron h1 {
@@ -193,16 +199,9 @@ body {
     }
 
     .jumbotron .container {
-      background: rgba(0, 0, 0, 0.75);
-      background: rgba(0, 0, 0, 0.5);
-      /*background: rgba(255, 255, 255, 0.75);*/
-      padding: 5px 15px;
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
-      -webkit-backdrop-filter: blur(2px);
-      backdrop-filter: blur(2px);
+
+      z-index: 4;
+      position: relative;
     }
     .navbar {
       background: rgba(255, 255, 255, 0.9) !important;
@@ -231,9 +230,7 @@ body {
     }
 
 @media (min-width: 576px) {
-  .jumbotron {
-    background-position: right top;
-  }
+
   .card-columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -255,7 +252,7 @@ body {
     </div>
   </nav>
 
-  <a href="https://safrazik.com" class="brand-owner">
+  <a href="https://safrazik.github.io" class="brand-owner">
     <span class="safrazik">
       <span class="saf">saf</span><span class="last raz">raz</span><span class="first raz">raz</span><span class="ik">ik</span><span class="" style="visibility: hidden;">ik</span>
     </span>
